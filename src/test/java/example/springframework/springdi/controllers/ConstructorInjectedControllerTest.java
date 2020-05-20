@@ -1,6 +1,6 @@
 package example.springframework.springdi.controllers;
 
-import example.springframework.springdi.services.GreetingServiceImpl;
+import example.springframework.springdi.services.ConstructorInjectedGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class ConstructorInjectedControllerTest {
     @BeforeEach
     void setUp() {
 
-        controller = new ConstructorInjectedController(new GreetingServiceImpl());
+        controller = new ConstructorInjectedController(new ConstructorInjectedGreetingService());
     }
 
     @Test
