@@ -1,4 +1,4 @@
-package example.springframework.springdi;
+package example.springframework.springdi.services;
 
 public interface GreetingService {
 
