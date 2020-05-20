@@ -1,17 +1,20 @@
 package example.springframework.springdi.controllers;
 
-import example.springframework.springdi.SpringDiApplication;
-import org.springframework.boot.SpringApplication;
-import org.springframework.context.ApplicationContext;
+import example.springframework.springdi.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class MyController {
 
-    public String sayHello(){
-        System.out.println("Hello World");
+    private final GreetingService greetingService;
 
-        return "Hello from Controller";
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
+    public String sayHello() {
+
+        return greetingService.sayGreeting();
     }
 
 }
